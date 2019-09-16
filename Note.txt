@@ -1,0 +1,3 @@
+1. bind trả data từ controller -> view (model): data sẽ đẩy từ controller sang view thông qua jstl.
+
+2. sử dụng jstl để loop menu ngoài view tức là thư viện jstl của jsp hỗ trợ loop 1 vòng lặp các menu vào 1 variable, sau đó trong jsp ta chỉ cần call tới file menu
