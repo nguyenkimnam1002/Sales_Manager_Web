@@ -9,6 +9,46 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	.dropbtn {
+	  background-color: #f1f1f1;
+	  color: white;
+	  padding: 16px;
+	  font-size: 16px;
+	  border: none;
+	}
+	
+	.dropdown {
+	  position: relative;
+	  display: inline-block;
+	}
+	
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  /*background-color: #3e8e41;*/
+	  background-color: #f1f1f1;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+	
+	.dropdown-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+	
+	/*.dropdown-content a:hover {background-color: #ddd;}*/
+	.dropdown-content a:hover {background-color: #3e8e41;}
+	
+	.dropdown:hover .dropdown-content {display: block;}
+	
+	.dropdown:hover .dropbtn {background-color: #f1f1f1;}
+	</style>
 </head>
 <body>
 	<!-- Khoi xu ly click linking toi request moi -->
@@ -19,11 +59,27 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<!-- Cac khoi Request -->
-				<li class="active"><a href="<c:url value="/dashboard" />">Dashboard</a></li>
+				<li class="active"><a href="<c:url value="/trang-chu" />">Dashboard</a></li>
 				<li><a href="<c:url value="/home" />">Home</a></li>
 				<li><a href="<c:url value="/spring-mvc" />">Spring Blog</a></li>
 				<li><a href="<c:url value="/addCustomer" />">Add Customer</a></li>
+				<li><div class="dropdown">
+					<button class="dropbtn">Menu</button>
+					<div class="dropdown-content">
+					  <a href="<c:url value="/home" />">Home</a>
+					  <a href="<c:url value="/spring-mvc" />">Spring Blog</a>
+					  <a href="<c:url value="/spring-mvc" />">Spring Blog</a>
+				    </div>
+				</div></li>
 			</ul>
+			<!-- <div class="dropdown">
+			  <button class="dropbtn">Menu</button>
+			  <div class="dropdown-content">
+			    <a href="<c:url value="/home" />">Home</a>
+			    <a href="<c:url value="/spring-mvc" />">Spring Blog</a>
+			    <a href="<c:url value="/spring-mvc" />">Spring Blog</a>
+		      </div>
+			</div> -->
 		</div>
 	</nav>
 	<div style="width: 600px; margin: auto;">
